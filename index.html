@@ -235,7 +235,7 @@
 			</li>
 			<li>
 				<h3>Trade-off between server and client effort</h3>
-				<span class="indent">Low-cost publishing and preventing server availability issues</span><br \>
+				<span class="indent">Low-cost publishing prevents server availability issues</span><br \>
                 <span class="indent">Executing parts of queries client-side</span>
 			</li>
 		</ul>
@@ -308,6 +308,7 @@
 
     <section id="link-traversal-conclusion" class="slide" inlist="" rel="schema:hasPart" resource="#link-traversal-conclusion">
       <h2 property="schema:name">Limitations of link traversal</h2>
+      <!-- All of them relate to performance -->
 	<ul>
 		<li>
               <h3>Some queries can cause number of links to become too high</h3>
@@ -318,7 +319,11 @@
 		<li>
               <h3>Traditional query planning is impossible</h3>
               <span class="indent">Due to zero knowledge at the start of query execution (no cardinalities, &mldr;)</span><br \>
-              <span class="indent">Need for adaptive query planning (<a href="https://www.rubensworks.net/publications/hanski_icwe_restart_2025/">Tam 2025</a>)</span>
+              <span class="indent">Need for adaptive query planning (<a href="https://www.rubensworks.net/publications/hanski_icwe_restart_2025/">Hanski 2025</a>)</span>
+		</li>
+		<li>
+              <h3>Restricted to document-based interface</h3>
+              <span class="indent">Potential to use more expressive server interfaces (e.g. SPARQL endpoints)</span>
 		</li>
 	</ul>
     </section>
@@ -332,11 +337,11 @@
     </section>
 	
     <section id="conclusion" class="slide" inlist="" rel="schema:hasPart" resource="#conclusion">
-      <h2 property="schema:name">Conclusion: Query-driven data integration for decentralized data</h2>
+      <h2 property="schema:name">Conclusion: Query processing techniques can integrate decentralized data</h2>
 		<ul>
 			<li>
                 <center><img src="img/comunica_white_on_red.svg" width="12%" style="float: right" /></center>
-				<h3>We require intelligent query engines</h3>
+				<h3>This requires intelligent query engines</h3>
                 <span class="indent">Abstract away complexities of decentralized data</span><br \>
                 <span class="indent"><a href="https://comunica.dev/">https://comunica.dev/</a></span>
 			</li>
