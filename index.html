@@ -96,6 +96,16 @@
 		<li><a href="#index-linktraversal">Link Traversal</a></li>
       </ul>
     </section>
+
+    <section id="knowledge-graphs" class="slide" style="background-image: url('img/network.jpg'); background-size: cover; box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6)" resource="#knowledge-graphs">
+        <h2 class="big" style="margin-top: 20px; color: white; text-shadow: 2px 2px black">Knowledge Graphs as foundation</h2>
+        <ul style="color: white; text-shadow: 2px 2px black; font-size: 1.3em">
+            <li>Interlinking data across multiple data sources</li>
+            <li><p class="indent" style="font-style:italic">Global identifiers and non-centrally controlled ontologies</p></li>
+            <li>Built on open standards</li>
+            <li><p class="indent" style="font-style:italic">RDF, SPARQL, &mldr;</p></li>
+        </ul>
+    </section>
 	
     <section id="query-centralized" class="slide" inlist="" rel="schema:hasPart" resource="#query-centralized">
         <h2 property="schema:name" style="margin-top: 40px">SPARQL processing over centralized data</h2>
@@ -107,7 +117,18 @@
 			</li>
 			<li>
 				<h3>Single dataset</h3>
-				<span class="indent">Combining multiple datasets is hard</span>
+				<span class="indent">With precomputed indexes</span>
+			</li>
+			<li>
+				<h3>Execute queries of any complexity</h3>
+                <pre style="background: white; font-size: 0.65em" class="indent">SELECT ?name ?deathDate WHERE {
+  ?person a dbpedia-owl:Artist;
+          rdfs:label ?name;
+          dbpedia-owl:birthPlace [ rdfs:label "York"@en ].
+  FILTER LANGMATCHES(LANG(?name),  "EN")
+  OPTIONAL { ?person dbpprop:dateOfDeath ?deathDate. }
+}
+                </pre>
 			</li>
 		</ul>
     </section>
@@ -141,7 +162,7 @@
 			</li>
 			<li>
 				<h3>Not just one datasets</h3>
-				<span class="indent">Data is spread over the Web into multiple <strong>documents</strong></span>
+				<span class="indent">Data is spread over the Web into multiple data sources</span>
 			</li>
 		</ul>
     </section>
@@ -230,7 +251,7 @@
 			</li>
 			<li>
 				<h3>Alternative interfaces besides SPARQL endpoints</h3>
-				<span class="indent">Linked Data Fragments: TPF, WiseKG, brTPF, ...</span><br \>
+				<span class="indent">Linked Data Fragments: TPF, WiseKG, brTPF, Passage, ...</span><br \>
                 <span class="indent">Different levels of server expressivity</span>
 			</li>
 			<li>
@@ -313,7 +334,7 @@
 		<li>
               <h3>Some queries can cause number of links to become too high</h3>
               <span class="indent">Following links is expensive</span><br \>
-              <span class="indent">Prioritizing links has no impact (<a href="https://www.rubensworks.net/publications/eschauzier_iswc_research_linkprioritization_2025/">Eschauzier 2025</a>)</span><br />
+              <span class="indent">Prioritizing links has no impact (<a href="https://www.diva-portal.org/smash/get/diva2:1059986/FULLTEXT01.pdf">Hartig 2016</a>, <a href="https://www.rubensworks.net/publications/eschauzier_iswc_research_linkprioritization_2025/">Eschauzier 2025</a>)</span><br />
               <span class="indent">Server-driven guidance to relevant links (e.g. Shapes Indexes: <a href="https://www.rubensworks.net/publications/tam_amw_shapeopportunities_2024/">Tam 2024</a>)</span>
 		</li>
 		<li>
@@ -337,11 +358,11 @@
     </section>
 	
     <section id="conclusion" class="slide" inlist="" rel="schema:hasPart" resource="#conclusion">
-      <h2 property="schema:name">Conclusion: Query processing techniques can integrate decentralized data</h2>
+      <h2 property="schema:name">Conclusion: Query engines can integrate decentralized data</h2>
 		<ul>
 			<li>
                 <center><img src="img/comunica_white_on_red.svg" width="12%" style="float: right" /></center>
-				<h3>This requires intelligent query engines</h3>
+				<h3>This requires intelligent query processing algorithms</h3>
                 <span class="indent">Abstract away complexities of decentralized data</span><br \>
                 <span class="indent"><a href="https://comunica.dev/">https://comunica.dev/</a></span>
 			</li>
