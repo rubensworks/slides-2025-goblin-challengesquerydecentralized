@@ -97,7 +97,7 @@
       </ul>
     </section>
 
-    <section id="knowledge-graphs" class="slide" style="background-image: url('img/network.jpg'); background-size: cover; box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6)" resource="#knowledge-graphs">
+    <!--<section id="knowledge-graphs" class="slide" style="background-image: url('img/network.jpg'); background-size: cover; box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.6)" resource="#knowledge-graphs">
         <h2 class="big" style="margin-top: 20px; color: white; text-shadow: 2px 2px black">Knowledge Graphs as foundation</h2>
         <ul style="color: white; text-shadow: 2px 2px black; font-size: 1.3em">
             <li>Interlinking data across multiple data sources</li>
@@ -105,7 +105,7 @@
             <li>Built on open standards</li>
             <li><p class="indent" style="font-style:italic">RDF, SPARQL, &mldr;</p></li>
         </ul>
-    </section>
+    </section>-->
 	
     <section id="query-centralized" class="slide" inlist="" rel="schema:hasPart" resource="#query-centralized">
         <h2 property="schema:name" style="margin-top: 40px">SPARQL processing over centralized data</h2>
@@ -365,20 +365,19 @@
       <h2 property="schema:name">Conclusion: Query engines can integrate decentralized data</h2>
 		<ul>
 			<li>
-                <center><img src="img/comunica_white_on_red.svg" width="12%" style="float: right" /></center>
 				<h3>This requires intelligent query processing algorithms</h3>
                 <span class="indent">Abstract away complexities of decentralized data</span><br \>
-                <span class="indent"><a href="https://comunica.dev/">https://comunica.dev/</a></span>
 			</li>
 			<li>
 				<h3>Trade-offs between federated querying and link traversal</h3>
-                <span class="indent">Federation is generally faster,</span><br \>
-                <span class="indent">but lacks source discovery and is limited in number of sources</span><br \>
-                <span class="indent">Link traversal currently only works over documents</span>
+                <span class="indent">Federation faster, but lacks source discovery and limited in #sources</span><br \>
+                <span class="indent">Link traversal currently only works over documents</span><br \>
+                <span class="indent">Need for a hybrid between federation and link traversal?</span>
 			</li>
 			<li>
-				<h3>Need for a hybrid between federation and link traversal</h3>
-                <span class="indent">Fast + source discovery</span>
+                <center><img src="img/comunica_white_on_red.svg" width="12%" style="float: right" /></center>
+				<h3>Active research</h3>
+                <span class="indent"><a href="https://comunica.dev/">https://comunica.dev/</a>: Engine for federation + link traversal</span>
 			</li>
 		</ul>
     </section>
